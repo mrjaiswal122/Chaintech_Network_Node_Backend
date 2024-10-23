@@ -19,6 +19,9 @@ app.use(express.json());
 
 const JWT_SECRET = process.env.JWT_SECRET || 'your_jwt_secret'; // Use environment variables in production
 
+app.get('/', (req, res) => {
+  res.send('Welcome to the API');
+})
 // Register route
 app.post('/register', async (req, res) => {
   console.log('In the Register');
